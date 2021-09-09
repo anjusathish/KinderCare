@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="LeaveFilterTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaveFilterTableViewCell" rowHeight="51" id="KGk-i7-Jjw" customClass="LeaveFilterTableViewCell" customModule="Kinder_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4B-Z2-ucG">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="51"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ib4-xJ-ett" customClass="BEMCheckBox">
+                                <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="KF5-jl-SeZ"/>
+                                    <constraint firstAttribute="width" constant="20" id="alc-nF-HAT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                        <color key="value" red="0.32156862745098036" green="0.23529411764705882" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENDING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-Ik-ba7">
+                                <rect key="frame" x="55" y="18" width="256" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ib4-xJ-ett" firstAttribute="leading" secondItem="N4B-Z2-ucG" secondAttribute="leading" constant="15" id="BNf-li-Uf1"/>
+                            <constraint firstItem="p3l-Ik-ba7" firstAttribute="centerY" secondItem="Ib4-xJ-ett" secondAttribute="centerY" id="NV8-Ll-0LV"/>
+                            <constraint firstAttribute="trailing" secondItem="p3l-Ik-ba7" secondAttribute="trailing" constant="15" id="Wdd-aM-7nu"/>
+                            <constraint firstItem="p3l-Ik-ba7" firstAttribute="leading" secondItem="Ib4-xJ-ett" secondAttribute="trailing" constant="20" id="l8A-4a-Ywt"/>
+                            <constraint firstItem="Ib4-xJ-ett" firstAttribute="top" secondItem="N4B-Z2-ucG" secondAttribute="top" constant="15" id="loa-EH-TYN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="N4B-Z2-ucG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FVc-ha-PFa"/>
+                    <constraint firstAttribute="bottom" secondItem="N4B-Z2-ucG" secondAttribute="bottom" id="GvK-Cf-FIs"/>
+                    <constraint firstItem="N4B-Z2-ucG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a6F-I6-xaT"/>
+                    <constraint firstAttribute="trailing" secondItem="N4B-Z2-ucG" secondAttribute="trailing" id="b7s-7d-qCy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="selectedCheckBox" destination="Ib4-xJ-ett" id="imR-gh-ER0"/>
+                <outlet property="statusLabel" destination="p3l-Ik-ba7" id="UQG-xK-sup"/>
+            </connections>
+            <point key="canvasLocation" x="127.53623188405798" y="86.71875"/>
+        </tableViewCell>
+    </objects>
+</document>

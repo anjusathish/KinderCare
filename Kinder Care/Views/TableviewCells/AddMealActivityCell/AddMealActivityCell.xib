@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddMealActivityCell" id="KGk-i7-Jjw" customClass="AddMealActivityCell" customModule="Kinder_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="457" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mhz-4u-QDZ">
+                        <rect key="frame" x="15" y="0.0" width="427" height="40"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Meal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Jb-Wo-3IZ" customClass="CTTextField" customModule="Kinder_Care" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="347" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZLN-dy-eCs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="downArrow"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="rightViewRect">
+                                        <size key="value" width="10" height="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgcolor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9E-0b-crb">
+                                <rect key="frame" x="357" y="0.0" width="70" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GPv-Mg-GrK">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je6-uT-W0T">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="Ewa-bC-xgB"/>
+                                                </constraints>
+                                                <state key="normal" image="roundedDelete"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxX-uY-FW4">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="GaB-82-ZvO"/>
+                                                </constraints>
+                                                <state key="normal" image="plus"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GPv-Mg-GrK" secondAttribute="bottom" id="3Xh-LD-7xT"/>
+                                    <constraint firstItem="GPv-Mg-GrK" firstAttribute="top" secondItem="P9E-0b-crb" secondAttribute="top" id="63X-vt-cVN"/>
+                                    <constraint firstAttribute="width" constant="70" id="D9I-e8-pAQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="cL7-vA-Lc5"/>
+                                    <constraint firstItem="GPv-Mg-GrK" firstAttribute="leading" secondItem="P9E-0b-crb" secondAttribute="leading" id="eDE-z0-U3V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="c7i-9l-dfe"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="mhz-4u-QDZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="QUz-9Q-qdT"/>
+                    <constraint firstAttribute="bottom" secondItem="mhz-4u-QDZ" secondAttribute="bottom" constant="10" id="dEh-zC-nm4"/>
+                    <constraint firstItem="mhz-4u-QDZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sMp-V9-ra7"/>
+                    <constraint firstAttribute="trailing" secondItem="mhz-4u-QDZ" secondAttribute="trailing" constant="15" id="z0q-Lo-HSr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnAdd" destination="lxX-uY-FW4" id="bP7-zK-qbA"/>
+                <outlet property="btnRemove" destination="Je6-uT-W0T" id="SbP-2m-YJZ"/>
+                <outlet property="txtMeal" destination="1Jb-Wo-3IZ" id="KXh-gQ-Qcp"/>
+            </connections>
+            <point key="canvasLocation" x="85" y="0.0"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="downArrow" width="12" height="7"/>
+        <image name="plus" width="28" height="28"/>
+        <image name="roundedDelete" width="28" height="28"/>
+    </resources>
+</document>

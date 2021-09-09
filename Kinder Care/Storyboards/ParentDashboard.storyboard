@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QsY-LK-B6H">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DashboardVC-->
+        <scene sceneID="Qsf-KN-S6j">
+            <objects>
+                <viewController storyboardIdentifier="DashboardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ypZ-Zc-vjF" customClass="DashboardVC" customModule="Kinder_Care" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="duT-X7-BLv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIk-NS-iFw" customClass="CTDayCalender" customModule="Kinder_Care" customModuleProvider="target">
+                                <rect key="frame" x="8" y="145" width="304" height="40"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.61176470588235299" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wss-YJ-5CF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftArrowImage" value="leftArrow"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightArrowImage" value="rightArrow"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="calenderImage" value="calendar"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showWeek" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calenderAction:" destination="ypZ-Zc-vjF" eventType="valueChanged" id="Osq-xb-4LR"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="obK-4M-lX7">
+                                <rect key="frame" x="5" y="320" width="310" height="248"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ypZ-Zc-vjF" id="7x2-tf-T4I"/>
+                                    <outlet property="delegate" destination="ypZ-Zc-vjF" id="MXM-2a-OIy"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sS-0z-DSS" customClass="ChildDropDown" customModule="Kinder_Care" customModuleProvider="target">
+                                <rect key="frame" x="16" y="70" width="288" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aYb-M7-uRR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jns-Vk-Wuu">
+                                <rect key="frame" x="8" y="210" width="304" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KKf-v7-6TC">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5E-Mp-cvF">
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="19.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" red="0.25882352939999997" green="0.28235294119999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-ms-kDQ">
+                                                <rect key="frame" x="0.0" y="29.5" width="304" height="70.5"/>
+                                                <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xf9-ga-Lcf">
+                                                    <size key="itemSize" width="60" height="60"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="ypZ-Zc-vjF" id="Mfa-iy-QtL"/>
+                                                    <outlet property="delegate" destination="ypZ-Zc-vjF" id="dIP-Ug-kGe"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="GqR-Mi-6UX"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KKf-v7-6TC" firstAttribute="leading" secondItem="Jns-Vk-Wuu" secondAttribute="leading" id="5nl-g7-8QL"/>
+                                    <constraint firstAttribute="bottom" secondItem="KKf-v7-6TC" secondAttribute="bottom" id="VuQ-I1-OKf"/>
+                                    <constraint firstItem="KKf-v7-6TC" firstAttribute="top" secondItem="Jns-Vk-Wuu" secondAttribute="top" id="jQM-F1-b43"/>
+                                    <constraint firstAttribute="trailing" secondItem="KKf-v7-6TC" secondAttribute="trailing" id="pYe-ed-Hux"/>
+                                    <constraint firstAttribute="height" constant="100" id="yee-Oj-nHN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="obK-4M-lX7" firstAttribute="leading" secondItem="uzU-1b-KDq" secondAttribute="leading" constant="5" id="4EI-zY-q9y"/>
+                            <constraint firstItem="kIk-NS-iFw" firstAttribute="leading" secondItem="uzU-1b-KDq" secondAttribute="leading" constant="8" id="A39-D3-Ab9"/>
+                            <constraint firstItem="uzU-1b-KDq" firstAttribute="trailing" secondItem="Jns-Vk-Wuu" secondAttribute="trailing" constant="8" id="Avw-93-WaH"/>
+                            <constraint firstItem="uzU-1b-KDq" firstAttribute="trailing" secondItem="0sS-0z-DSS" secondAttribute="trailing" constant="16" id="Az3-GO-bOo"/>
+                            <constraint firstItem="0sS-0z-DSS" firstAttribute="leading" secondItem="uzU-1b-KDq" secondAttribute="leading" constant="16" id="H1u-de-2RH"/>
+                            <constraint firstItem="obK-4M-lX7" firstAttribute="bottom" secondItem="uzU-1b-KDq" secondAttribute="bottom" id="R5M-58-xSO"/>
+                            <constraint firstItem="Jns-Vk-Wuu" firstAttribute="top" secondItem="kIk-NS-iFw" secondAttribute="bottom" constant="25" id="VAt-wU-b0b"/>
+                            <constraint firstItem="uzU-1b-KDq" firstAttribute="trailing" secondItem="obK-4M-lX7" secondAttribute="trailing" constant="5" id="ayN-IZ-Q8o"/>
+                            <constraint firstItem="obK-4M-lX7" firstAttribute="top" secondItem="Jns-Vk-Wuu" secondAttribute="bottom" constant="10" id="grH-2w-trT"/>
+                            <constraint firstItem="uzU-1b-KDq" firstAttribute="trailing" secondItem="kIk-NS-iFw" secondAttribute="trailing" constant="8" id="sIc-d1-ycn"/>
+                            <constraint firstItem="0sS-0z-DSS" firstAttribute="top" secondItem="uzU-1b-KDq" secondAttribute="top" constant="70" id="xuc-fd-eGH"/>
+                            <constraint firstItem="kIk-NS-iFw" firstAttribute="top" secondItem="0sS-0z-DSS" secondAttribute="bottom" constant="15" id="yNV-1Y-HTO"/>
+                            <constraint firstItem="Jns-Vk-Wuu" firstAttribute="leading" secondItem="uzU-1b-KDq" secondAttribute="leading" constant="8" id="zLP-jh-dVC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uzU-1b-KDq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lNw-o0-uG6"/>
+                    <connections>
+                        <outlet property="calendarViw" destination="kIk-NS-iFw" id="cgA-Jc-sIP"/>
+                        <outlet property="childDropDown" destination="0sS-0z-DSS" id="nUc-pj-gFC"/>
+                        <outlet property="collActivity" destination="h8d-ms-kDQ" id="Mrk-2O-5Wo"/>
+                        <outlet property="lblActivity" destination="j5E-Mp-cvF" id="eV8-tu-WTc"/>
+                        <outlet property="tblActivities" destination="obK-4M-lX7" id="PkQ-Ym-dkn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpy-MB-LnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.75" y="110.91549295774648"/>
+        </scene>
+        <!--Weekly MenuVC-->
+        <scene sceneID="4Io-h6-LPM">
+            <objects>
+                <viewController storyboardIdentifier="WeeklyMenuVC" id="AKl-dG-UP9" customClass="WeeklyMenuVC" customModule="Kinder_Care" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Rb-ao-BDu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fkq-VY-vd3" customClass="CTDayWeekCalender" customModule="Kinder_Care" customModuleProvider="target">
+                                <rect key="frame" x="10" y="180" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.61176470589999998" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8iA-Hp-ouv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftArrowImage" value="leftArrow"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightArrowImage" value="rightArrow"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="calenderImage" value="calendar"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calenderAction:" destination="AKl-dG-UP9" eventType="valueChanged" id="EBm-54-0lF"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POj-yw-IYe">
+                                <rect key="frame" x="16" y="300" width="288" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UE1-WN-BXe">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="hAF-fM-f5U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMq-bD-dR2">
+                                        <rect key="frame" x="10" y="21" width="268" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="September 13, Friday Menu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-9T-Ogn">
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" red="0.23137254901960785" green="0.24313725490196078" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMj-U4-TjG">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="RAM-3B-sDH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Edit" image="edit_wm">
+                                                    <color key="titleColor" red="0.32156862749999998" green="0.23529411759999999" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="editWeeklyMenu:" destination="AKl-dG-UP9" eventType="touchUpInside" id="SPJ-Yu-5Jz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sMq-bD-dR2" secondAttribute="trailing" constant="10" id="0KA-HK-v6t"/>
+                                    <constraint firstAttribute="trailing" secondItem="UE1-WN-BXe" secondAttribute="trailing" id="EWV-z1-0dd"/>
+                                    <constraint firstItem="UE1-WN-BXe" firstAttribute="top" secondItem="POj-yw-IYe" secondAttribute="top" id="Kpr-z6-5CB"/>
+                                    <constraint firstItem="UE1-WN-BXe" firstAttribute="leading" secondItem="POj-yw-IYe" secondAttribute="leading" id="LEc-hi-h4Y"/>
+                                    <constraint firstItem="sMq-bD-dR2" firstAttribute="top" secondItem="UE1-WN-BXe" secondAttribute="bottom" constant="20" id="NRn-bo-rKj"/>
+                                    <constraint firstItem="sMq-bD-dR2" firstAttribute="leading" secondItem="POj-yw-IYe" secondAttribute="leading" constant="10" id="Zvc-7f-yB6"/>
+                                    <constraint firstAttribute="bottom" secondItem="sMq-bD-dR2" secondAttribute="bottom" id="sbP-Mo-1Vc"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g37-9F-VBW">
+                                <rect key="frame" x="10" y="346.5" width="300" height="201.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AKl-dG-UP9" id="lNt-hf-j9V"/>
+                                    <outlet property="delegate" destination="AKl-dG-UP9" id="BY7-un-jmM"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3hL-1h-bA6">
+                                <rect key="frame" x="16" y="70" width="288" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eY2-cx-fgf" customClass="CTTextField" customModule="Kinder_Care" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oHd-Ve-usC"/>
+                                            <constraint firstAttribute="width" constant="175" id="vVF-Ph-Y5b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="downArrow"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="rightViewRect">
+                                                <size key="value" width="10" height="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="AKl-dG-UP9" id="SrE-L7-xca"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxe-ux-JMz" customClass="ChildDropDown" customModule="Kinder_Care" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="288" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="L3a-tm-2NL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVY-zV-tPm">
+                                <rect key="frame" x="225" y="463" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="WZl-gq-8Ck"/>
+                                    <constraint firstAttribute="height" constant="75" id="Yc2-TI-axN"/>
+                                </constraints>
+                                <state key="normal" image="weeklymenu_add"/>
+                                <connections>
+                                    <action selector="addWeeklyMenu:" destination="AKl-dG-UP9" eventType="touchUpInside" id="qxd-EY-zBA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95306211709999999" green="0.95262521509999998" blue="0.96863025430000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3hL-1h-bA6" firstAttribute="top" secondItem="mzV-qv-Yda" secondAttribute="top" constant="70" id="1Cb-8V-YdH"/>
+                            <constraint firstAttribute="trailing" secondItem="3hL-1h-bA6" secondAttribute="trailing" constant="16" id="8ce-UH-hvw"/>
+                            <constraint firstItem="3hL-1h-bA6" firstAttribute="leading" secondItem="mzV-qv-Yda" secondAttribute="leading" constant="16" id="Gfy-xg-qD0"/>
+                            <constraint firstItem="mzV-qv-Yda" firstAttribute="trailing" secondItem="Fkq-VY-vd3" secondAttribute="trailing" constant="10" id="HsB-p5-QWy"/>
+                            <constraint firstItem="mzV-qv-Yda" firstAttribute="bottom" secondItem="g37-9F-VBW" secondAttribute="bottom" constant="20" id="Mpp-PM-ZOs"/>
+                            <constraint firstItem="POj-yw-IYe" firstAttribute="top" secondItem="Fkq-VY-vd3" secondAttribute="bottom" constant="20" id="SSJ-OU-p8s"/>
+                            <constraint firstItem="mzV-qv-Yda" firstAttribute="trailing" secondItem="IVY-zV-tPm" secondAttribute="trailing" constant="20" id="Vxq-4S-MR5"/>
+                            <constraint firstItem="mzV-qv-Yda" firstAttribute="trailing" secondItem="g37-9F-VBW" secondAttribute="trailing" constant="10" id="W1n-Ig-jCu"/>
+                            <constraint firstItem="Fkq-VY-vd3" firstAttribute="top" secondItem="3hL-1h-bA6" secondAttribute="bottom" constant="10" id="YPd-7U-OdZ"/>
+                            <constraint firstItem="g37-9F-VBW" firstAttribute="leading" secondItem="mzV-qv-Yda" secondAttribute="leading" constant="10" id="d6S-iG-mo5"/>
+                            <constraint firstItem="mzV-qv-Yda" firstAttribute="trailing" secondItem="POj-yw-IYe" secondAttribute="trailing" constant="16" id="lII-nF-CDl"/>
+                            <constraint firstItem="mzV-qv-Yda" firstAttribute="bottom" secondItem="IVY-zV-tPm" secondAttribute="bottom" constant="30" id="oqb-Tt-pNV"/>
+                            <constraint firstItem="POj-yw-IYe" firstAttribute="leading" secondItem="mzV-qv-Yda" secondAttribute="leading" constant="16" id="pPm-dz-tS1"/>
+                            <constraint firstItem="Fkq-VY-vd3" firstAttribute="leading" secondItem="mzV-qv-Yda" secondAttribute="leading" constant="10" id="z1l-Aa-YeR"/>
+                            <constraint firstItem="g37-9F-VBW" firstAttribute="top" secondItem="POj-yw-IYe" secondAttribute="bottom" constant="5.5" id="zbh-yb-zhi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mzV-qv-Yda"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="IVY-zV-tPm" id="bwd-8u-64P"/>
+                        <outlet property="calendarView" destination="Fkq-VY-vd3" id="sfw-HC-Cxj"/>
+                        <outlet property="childDropDown" destination="wxe-ux-JMz" id="mm5-7l-ysC"/>
+                        <outlet property="classTF" destination="eY2-cx-fgf" id="prR-EV-mL5"/>
+                        <outlet property="dateLabel" destination="tDd-9T-Ogn" id="LXC-gE-Nvg"/>
+                        <outlet property="editBtn" destination="HMj-U4-TjG" id="3Zz-7S-epe"/>
+                        <outlet property="menuTableView" destination="g37-9F-VBW" id="4Cc-Fl-RKv"/>
+                        <outlet property="topStackView" destination="3hL-1h-bA6" id="og5-YF-wXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6d-Rm-E2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867.5" y="94.014084507042256"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e2e-Aw-X5x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="QsY-LK-B6H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p55-3p-833">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ypZ-Zc-vjF" kind="relationship" relationship="rootViewController" id="jXg-J2-0LR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LV2-UD-3wN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="110.91549295774648"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" width="16" height="16"/>
+        <image name="downArrow" width="12" height="7"/>
+        <image name="edit_wm" width="18" height="18"/>
+        <image name="leftArrow" width="7" height="12"/>
+        <image name="rightArrow" width="7" height="12"/>
+        <image name="weeklymenu_add" width="97" height="97"/>
+    </resources>
+</document>

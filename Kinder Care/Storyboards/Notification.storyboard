@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rDf-DC-XJh">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NotificationVC-->
+        <scene sceneID="klo-vM-omN">
+            <objects>
+                <viewController storyboardIdentifier="NotificationVC" id="8nI-r0-lRL" customClass="NotificationVC" customModule="Kinder_Care" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dQh-AY-D44">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VCc-ti-iPE">
+                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8nI-r0-lRL" id="6KE-2S-Ak2"/>
+                                    <outlet property="delegate" destination="8nI-r0-lRL" id="Vdh-gO-zSr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ud3-05-1tp" firstAttribute="bottom" secondItem="VCc-ti-iPE" secondAttribute="bottom" constant="10" id="8Nz-sE-HuN"/>
+                            <constraint firstAttribute="trailing" secondItem="VCc-ti-iPE" secondAttribute="trailing" constant="10" id="Xjb-wt-o7X"/>
+                            <constraint firstItem="VCc-ti-iPE" firstAttribute="top" secondItem="dQh-AY-D44" secondAttribute="top" constant="10" id="mht-2L-4Hh"/>
+                            <constraint firstItem="VCc-ti-iPE" firstAttribute="leading" secondItem="Ud3-05-1tp" secondAttribute="leading" constant="10" id="oHG-Bb-av1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ud3-05-1tp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JVl-er-5lA"/>
+                    <connections>
+                        <outlet property="notificationTable" destination="VCc-ti-iPE" id="Nfo-yj-ZPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ld4-8T-46N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.375" y="51.760563380281688"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KzC-fw-tnV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="rDf-DC-XJh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0aS-Xt-Mu5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8nI-r0-lRL" kind="relationship" relationship="rootViewController" id="EMB-zD-gAo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cd7-31-gsG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91.875" y="51.760563380281688"/>
+        </scene>
+    </scenes>
+</document>

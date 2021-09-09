@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MealTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="104" id="tA0-2Z-1u3" customClass="MealTableViewCell" customModule="Kinder_Care" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tA0-2Z-1u3" id="yQH-5d-hMh">
+                <rect key="frame" x="0.0" y="0.0" width="459" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1l-MU-Wl4">
+                        <rect key="frame" x="0.0" y="10" width="459" height="84"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fur-rA-LUj">
+                                <rect key="frame" x="20" y="0.0" width="419" height="84"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-Pz-AJc" customClass="CTView" customModule="Kinder_Care" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="419" height="84"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM Snacks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WML-ok-uix">
+                                                <rect key="frame" x="20" y="10" width="379" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.4549019608" green="0.47058823529999999" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBb-HT-haX">
+                                                <rect key="frame" x="20" y="37" width="379" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="FVV-5m-ZbL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ONv-M5-huH">
+                                                <rect key="frame" x="20" y="48" width="379" height="26"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ONv-M5-huH" firstAttribute="top" secondItem="oBb-HT-haX" secondAttribute="bottom" constant="10" id="17D-f6-B97"/>
+                                            <constraint firstItem="ONv-M5-huH" firstAttribute="leading" secondItem="nfl-Pz-AJc" secondAttribute="leading" constant="20" id="Dg5-Kp-UOY"/>
+                                            <constraint firstAttribute="trailing" secondItem="ONv-M5-huH" secondAttribute="trailing" constant="20" id="Ma5-t6-5Vi"/>
+                                            <constraint firstAttribute="trailing" secondItem="WML-ok-uix" secondAttribute="trailing" constant="20" id="dfc-un-Tcu"/>
+                                            <constraint firstItem="WML-ok-uix" firstAttribute="top" secondItem="nfl-Pz-AJc" secondAttribute="top" constant="10" id="mcr-7a-1Ij"/>
+                                            <constraint firstItem="oBb-HT-haX" firstAttribute="leading" secondItem="nfl-Pz-AJc" secondAttribute="leading" constant="20" id="nDH-T3-cp1"/>
+                                            <constraint firstAttribute="trailing" secondItem="oBb-HT-haX" secondAttribute="trailing" constant="20" id="pGj-gn-MJT"/>
+                                            <constraint firstAttribute="bottom" secondItem="ONv-M5-huH" secondAttribute="bottom" constant="10" id="vhn-p4-SwK"/>
+                                            <constraint firstItem="oBb-HT-haX" firstAttribute="top" secondItem="WML-ok-uix" secondAttribute="bottom" constant="10" id="yBb-1S-Tjt"/>
+                                            <constraint firstItem="WML-ok-uix" firstAttribute="leading" secondItem="nfl-Pz-AJc" secondAttribute="leading" constant="20" id="ygh-TV-XbI"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fur-rA-LUj" secondAttribute="trailing" constant="20" id="0cj-g5-jb9"/>
+                            <constraint firstItem="Fur-rA-LUj" firstAttribute="leading" secondItem="y1l-MU-Wl4" secondAttribute="leading" constant="20" id="F9A-PD-CSu"/>
+                            <constraint firstItem="Fur-rA-LUj" firstAttribute="top" secondItem="y1l-MU-Wl4" secondAttribute="top" id="iWQ-s6-mdq"/>
+                            <constraint firstAttribute="bottom" secondItem="Fur-rA-LUj" secondAttribute="bottom" id="upc-tQ-2uf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="y1l-MU-Wl4" firstAttribute="top" secondItem="yQH-5d-hMh" secondAttribute="top" constant="10" id="4MA-UA-Epx"/>
+                    <constraint firstAttribute="bottom" secondItem="y1l-MU-Wl4" secondAttribute="bottom" constant="10" id="BiP-Sn-6sS"/>
+                    <constraint firstAttribute="trailing" secondItem="y1l-MU-Wl4" secondAttribute="trailing" id="FZ7-f2-mMJ"/>
+                    <constraint firstItem="y1l-MU-Wl4" firstAttribute="leading" secondItem="yQH-5d-hMh" secondAttribute="leading" id="qxL-bc-Ymq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="foodItemStackView" destination="ONv-M5-huH" id="89p-f0-Vll"/>
+                <outlet property="foodTypeLbl" destination="WML-ok-uix" id="DOv-KW-Pga"/>
+                <outlet property="mainView" destination="y1l-MU-Wl4" id="snR-M2-uXO"/>
+            </connections>
+            <point key="canvasLocation" x="1544.0625" y="10.56338028169014"/>
+        </tableViewCell>
+    </objects>
+</document>

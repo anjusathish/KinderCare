@@ -1,0 +1,58 @@
+PODS:
+  - AAFloatingButton (1.2)
+  - BEMCheckBox (1.4.1)
+  - DropDown (2.3.13)
+  - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManagerSwift (6.5.6)
+  - RESideMenu (4.0.7)
+  - SDWebImage (5.9.0):
+    - SDWebImage/Core (= 5.9.0)
+  - SDWebImage/Core (5.9.0)
+  - SKPhotoBrowser (6.1.0)
+  - SVPinView (1.0.9)
+  - TTGSnackbar (1.10.3)
+  - "UITextView+Placeholder (1.4.0)"
+
+DEPENDENCIES:
+  - AAFloatingButton
+  - BEMCheckBox
+  - DropDown
+  - DZNEmptyDataSet
+  - IQKeyboardManagerSwift
+  - RESideMenu (~> 4.0.7)
+  - SDWebImage
+  - SKPhotoBrowser
+  - SVPinView
+  - TTGSnackbar
+  - "UITextView+Placeholder"
+
+SPEC REPOS:
+  trunk:
+    - AAFloatingButton
+    - BEMCheckBox
+    - DropDown
+    - DZNEmptyDataSet
+    - IQKeyboardManagerSwift
+    - RESideMenu
+    - SDWebImage
+    - SKPhotoBrowser
+    - SVPinView
+    - TTGSnackbar
+    - "UITextView+Placeholder"
+
+SPEC CHECKSUMS:
+  AAFloatingButton: a66b3c668cce50cba0ae010383c0c9d09a74e6f5
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
+  SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
+  SVPinView: 3dd47f5cd5ee67520ab1319a780cc0664735fafe
+  TTGSnackbar: 97c033600de8a9c8f4a093f25a08543a03946bcc
+  "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
+
+PODFILE CHECKSUM: fc29b4bdd413140b2a79da0fdee69ad074b2458d
+
+COCOAPODS: 1.10.1
